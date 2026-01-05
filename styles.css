@@ -1,165 +1,36 @@
-/* Bunk Brand Styles - styles.css */
-/* Primary: #F4AFC1 | Secondary: #A0067E | Tertiary: #AEDCFF */
-
-:root {
-  --primary: #F4AFC1;
-  --secondary: #A0067E;
-  --tertiary: #AEDCFF;
-  --ink: #0F172A;
-  --muted: #6B7280;
-  --line: #E5E7EB;
-  --white: #FFFFFF;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  color: var(--ink);
-  background: var(--white);
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.header {
-  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
-  color: var(--white);
-  padding: 30px 20px;
-  border-radius: 12px;
-  text-align: center;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 12px rgba(160, 6, 126, 0.15);
-}
-
-h1 {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 4px;
-  color: var(--white);
-}
-
-.subtitle {
-  font-size: 14px;
-  opacity: 0.95;
-}
-
-h2 {
-  color: var(--secondary);
-  font-size: 20px;
-  font-weight: 700;
-  margin: 30px 0 15px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--tertiary);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-th {
-  background: var(--primary);
-  color: var(--secondary);
-  font-weight: 600;
-  padding: 15px 16px;
-  text-align: left;
-  font-size: 15px;
-}
-
-td {
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--line);
-}
-
-tr:hover td {
-  background: rgba(244, 175, 193, 0.05);
-}
-
-ul {
-  padding-left: 20px;
-  margin: 20px 0;
-}
-
-li {
-  margin-bottom: 8px;
-  color: var(--ink);
-}
-
-a {
-  color: var(--secondary);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: var(--primary);
-}
-
-.signature {
-  margin-top: 40px;
-  padding: 25px;
-  background: linear-gradient(135deg, var(--tertiary) 0%, var(--primary) 100%);
-  border-radius: 12px;
-  text-align: center;
-  color: var(--ink);
-}
-
-.signature strong {
-  color: var(--secondary);
-  display: block;
-  margin-bottom: 8px;
-}
-
-footer {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  font-size: 13px;
-  color: var(--muted);
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  background: var(--secondary);
-  color: var(--white);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(160, 6, 126, 0.2);
-}
-
-.btn:hover {
-  background: var(--primary);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(160, 6, 126, 0.3);
-}
-
-/* Responsive */
-@media (max-width: 480px) {
-  .container { padding: 20px 15px; }
-  h1 { font-size: 24px; }
-  th, td { padding: 12px 10px; font-size: 14px; }
-}
-
-/* Print */
-@media print {
-  .header { box-shadow: none; }
-  body { background: white; }
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIMI Logo - Bunk (Ready for DNS)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BUNK</h1>
+            <p class="subtitle">BIMI Logo Selector · Copy URL Below</p>
+        </div>
+        
+        <h2>Live Preview</h2>
+        <img src="bimi-logo.svg" width="100" height="100" alt="Bunk BIMI Logo" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        
+        <h2>Direct URL (Copy for DNS)</h2>
+        <p><strong>https://YOUR-PROJECT.vercel.app/bimi-logo.svg</strong></p>
+        <a href="bimi-logo.svg" class="btn" download>Download SVG (1KB)</a>
+        
+        <h2>DNS TXT Record</h2>
+        <code style="background: var(--line); padding: 16px; border-radius: 8px; display: block; font-family: monospace; overflow: auto;">
+default._bimi.bunk-app.in TXT "v=BIMI1; l=https://YOUR-PROJECT.vercel.app/bimi-logo.svg;"
+        </code>
+        
+        <p>Replace YOUR-PROJECT → Test at <a href="https://bimi.observer" target="_blank">bimi.observer</a>. Logo appears in Gmail in 48hrs![file:25]</p>
+        
+        <div class="signature">
+            <strong>Umesh Sharma<br>Founder, Bunk</strong>
+            <p>bunk-app.in</p>
+        </div>
+    </div>
+</body>
+</html>
